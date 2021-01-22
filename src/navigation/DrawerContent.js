@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { StyleSheet, View } from 'react-native'
 import {DrawerContentScrollView} from "@react-navigation/drawer"
-import {Drawer,Switch,TouchableRipple,Text}from 'react-native-paper';
+import {Drawer,Switch,TouchableRipple,Text, IconButton}from 'react-native-paper';
 import usePreference from "../hooks/usePreferences";
 
 //Este componente es para hacer un drawer personalizado, se manda a llamar en Navigation
@@ -16,6 +16,7 @@ export default function DrawerContent(props) {
     }
     return (
         <DrawerContentScrollView>
+           
             <Drawer.Section>
                 <Drawer.Item label="Inicio" active={active === "home"} onPress={() => onChangeScreen('home')}/>
                 <Drawer.Item label="Peliculas Populares" active={active === "popular"} onPress={() => onChangeScreen('popular')}/>
