@@ -14,6 +14,7 @@ export default function StackNavigation(props) {
     const buttonLeft = (screen) => {
         switch(screen){
             case "search":
+            case 'movie':
                 return(
                     <IconButton icon="arrow-left" onPress={() => navigation.goBack()}/>
                 )
